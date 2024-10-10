@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <style>
+            table{
+                font-family: Arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+            td,th{
+                border: 1px solid #dddd;
+                text-align: left;
+                padding: 8px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h3> style="text-align: center;" >GymFit</h3>
+        <table>
+            <tr>
+                <th>Name: <%= name> </th>
+                <th>Email: <%= email%></th>
+                <th></th>
+            </tr>
+            <tr>
+            <th>Contact Number: <%= contactNumber%></th>
+            <th>Payment Method: <%= paymentMethod></th>
+        </tr>
+        </table>
+        <h3> Abonnement Details:</h3>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>adherent</th>
+                <th>Email</th>
+                <th>Price</th>
+                <th>Sub Total</th>
+            </tr>
+            <% if(coachDetails.lenght> 0) { %>
+            <% coachDetails.forEach(coach=>{ %>
+                <tr>
+                    <td><% coach.name%></td>
+                    <td><% coach.adherent%></td>
+                    <td><% coach.email%></td>
+                    <td><% coach.Price%></td>
+                    <td><% coach.Total%></td>
+
+                </tr>
+                <%});%>
+                <%}%>
+        </table>
+        <h3> Total: <%= toalAmount %></h3>
+        <h3>Thank you for visiting. Please visiting again!!</h3>
+    </body>
+   
+</html>
